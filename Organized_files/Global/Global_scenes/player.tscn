@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://bcmwlmk4f7ek2"]
+
+[ext_resource type="Script" path="res://Organized_files/Player.cs" id="1_vxqqy"]
+[ext_resource type="PackedScene" uid="uid://xyanu3colxk3" path="res://Organized_files/Downloaded_assets/Models/Rigged_male/final low poly character  rigged.blend" id="2_t7jks"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hap5v"]
+radius = 0.407108
+height = 2.98098
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_q80u1"]
+radius = 1.5
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+script = ExtResource("1_vxqqy")
+
+[node name="final low poly character  rigged" parent="." instance=ExtResource("2_t7jks")]
+transform = Transform3D(-0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.41469, 0)
+shape = SubResource("CapsuleShape3D_hap5v")
+
+[node name="SpringArm3D" type="SpringArm3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0238266, 1.49247, 0.0547972)
+spring_length = 4.0
+margin = 0.5
+
+[node name="Camera3D" type="Camera3D" parent="SpringArm3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="interaction_area" type="Area3D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="interaction_area"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 1.2, -1)
+shape = SubResource("SphereShape3D_q80u1")
+
+[connection signal="area_entered" from="interaction_area" to="." method="AddInteraction"]
+[connection signal="area_exited" from="interaction_area" to="." method="RemoveInteraction"]

@@ -1,0 +1,78 @@
+[gd_scene load_steps=9 format=3 uid="uid://qs8bix0fmnv7"]
+
+[ext_resource type="PackedScene" uid="uid://bcmwlmk4f7ek2" path="res://Organized_files/Global/Global_scenes/player.tscn" id="1_sn8aa"]
+[ext_resource type="PackedScene" uid="uid://dud6xquod1ha3" path="res://InteractionArea.tscn" id="2_sv6i4"]
+[ext_resource type="PackedScene" uid="uid://bioqhmkmdcefh" path="res://cell_door.tscn" id="3_nhwfl"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_3klfa"]
+size = Vector2(20, 20)
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_r2pjw"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_byhys"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_mw4cd"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_hyrg1"]
+radius = 2.0
+
+[node name="Node3D" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0281112, -0.0161734, 0.0254259)
+mesh = SubResource("PlaneMesh_3klfa")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("WorldBoundaryShape3D_r2pjw")
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("1_sn8aa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.100764, 0, -0.0568199)
+
+[node name="shere" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, -6)
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="shere"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="shere/StaticBody3D2"]
+mesh = SubResource("SphereMesh_byhys")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="shere/StaticBody3D2"]
+shape = SubResource("SphereShape3D_mw4cd")
+
+[node name="Shere_2" parent="shere" node_paths=PackedStringArray("ParentBody") instance=ExtResource("2_sv6i4")]
+ParentBody = NodePath("..")
+metadata/Body = NodePath("../StaticBody3D2")
+metadata/Shere = "Shere_1"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="shere/Shere_2"]
+shape = SubResource("SphereShape3D_hyrg1")
+
+[node name="shere2" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, -6)
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="shere2"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="shere2/StaticBody3D2"]
+mesh = SubResource("SphereMesh_byhys")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="shere2/StaticBody3D2"]
+shape = SubResource("SphereShape3D_mw4cd")
+
+[node name="CellDoor" parent="." instance=ExtResource("3_nhwfl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.74351, 0, -1.09601)
+
+[node name="Shere_1" parent="CellDoor" node_paths=PackedStringArray("ParentBody") instance=ExtResource("2_sv6i4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 2, 0)
+ParentBody = NodePath("../../shere2")
+metadata/Body = NodePath("../../shere2/StaticBody3D2")
+metadata/Shere = "Shere_2"
+
+[node name="CellDoorInteraction" type="CollisionShape3D" parent="CellDoor/Shere_1"]
+shape = SubResource("SphereShape3D_hyrg1")
