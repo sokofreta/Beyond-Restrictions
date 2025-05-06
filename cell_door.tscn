@@ -9,5 +9,5 @@ mesh_library = ExtResource("1_7a8cn")
 cell_center_y = false
 collision_mask = 3
 data = {
-"cells": PackedInt32Array(2, 65535, 4, 1, 0, 655364)
+"cells": PackedInt32Array(65535, 0, 655364, 0, 65535, 4)
 }

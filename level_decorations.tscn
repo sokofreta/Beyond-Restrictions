@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cpdna3tkl4fqg"]
+
+[ext_resource type="PackedScene" uid="uid://cxkdkeagf08c5" path="res://Game_files/Global/Mesh_Lib/Blender_files/LevelDecorations.blend" id="1_87pkt"]
+
+[node name="LevelDecorations" type="Node3D"]
+
+[node name="LevelDecorations" parent="." instance=ExtResource("1_87pkt")]

@@ -1,0 +1,113 @@
+[gd_scene load_steps=5 format=3 uid="uid://1ulm4l6ebt6p"]
+
+[ext_resource type="Script" path="res://Game_files/Global/Global_scenes/MainMenu.cs" id="1_uqg6f"]
+[ext_resource type="Texture2D" uid="uid://c4gd5ahyf2uft" path="res://Game_files/Downloaded_assets/Materials/concrete_layers_1k.blend/textures/concrete_layers_diff_1k.jpg" id="2_1rgfb"]
+[ext_resource type="Theme" uid="uid://cen33mn8ptnok" path="res://Game_files/Global/Themes/Main_menu_button.tres" id="3_2rsf5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_kaiwg"]
+line_spacing = 5.0
+font_size = 50
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Main_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uqg6f")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_1rgfb")
+expand_mode = 1
+
+[node name="Scene_title" type="Label" parent="."]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.2
+anchor_right = 1.0
+anchor_bottom = 0.2
+offset_top = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Welcome 
+prison breaker"
+label_settings = SubResource("LabelSettings_kaiwg")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Buttons" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Play_button" type="Button" parent="Buttons"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -82.0
+offset_top = -45.5
+offset_right = 82.0
+offset_bottom = 45.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_2rsf5")
+text = "PLAY
+"
+icon_alignment = 2
+
+[node name="Settings_button" type="Button" parent="Buttons"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -82.0
+offset_top = 54.5
+offset_right = 82.0
+offset_bottom = 145.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_2rsf5")
+text = "Settings"
+icon_alignment = 2
+
+[node name="Quit_button" type="Button" parent="Buttons"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -82.0
+offset_top = 154.5
+offset_right = 82.0
+offset_bottom = 245.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_2rsf5")
+text = "Quit
+"
+icon_alignment = 2

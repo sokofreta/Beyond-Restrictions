@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Prison"
-run/main_scene="res://Organized_files/Global/Global_scenes/main_menu.tscn"
+run/main_scene="res://Game_files/Global/Global_scenes/main_menu.tscn"
 config/features=PackedStringArray("4.3", "C#", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+CustomSignals="*res://Game_files/Global/Scripts/CustomSignals.cs"
 
 [display]
 

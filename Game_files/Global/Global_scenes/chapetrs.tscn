@@ -1,0 +1,118 @@
+[gd_scene load_steps=11 format=3 uid="uid://dlohy6pj3y6yx"]
+
+[ext_resource type="Script" path="res://Game_files/Global/Global_scenes/Chapetrs_controler.cs" id="1_7dipn"]
+[ext_resource type="Theme" uid="uid://c3wntyoqbygfn" path="res://Game_files/Global/Themes/Select_chapters_theme.tres" id="2_4gque"]
+[ext_resource type="Texture2D" uid="uid://d3i2nqty5fu4v" path="res://Game_files/Downloaded_assets/Icons/Chapters_numbers/Chapter_number_1.png" id="3_j3s1k"]
+[ext_resource type="Texture2D" uid="uid://c2k7klwpvuxcl" path="res://Game_files/Downloaded_assets/Icons/Chapters_numbers/Chapter_number_2.png" id="3_texaa"]
+[ext_resource type="Texture2D" uid="uid://cl8kxjvb6ppbf" path="res://Game_files/Downloaded_assets/Icons/Chapters_numbers/Chapter_number_3.png" id="4_6i7f2"]
+[ext_resource type="Texture2D" uid="uid://0dfkw1o5284l" path="res://Game_files/Downloaded_assets/Icons/Chapters_numbers/Chapter_number_4.png" id="5_yn6tc"]
+[ext_resource type="Texture2D" uid="uid://bgpfuwb4pbq2n" path="res://Game_files/Downloaded_assets/Icons/Chapters_numbers/Chapter_number_5.png" id="6_2tcd5"]
+[ext_resource type="Texture2D" uid="uid://chlcn7jrafhay" path="res://Game_files/Downloaded_assets/Icons/Chapters_numbers/Chapter_number_6.png" id="7_ekrlq"]
+[ext_resource type="Texture2D" uid="uid://c4gd5ahyf2uft" path="res://Game_files/Downloaded_assets/Materials/concrete_layers_1k.blend/textures/concrete_layers_diff_1k.jpg" id="9_oup5p"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ljoqg"]
+font_size = 30
+
+[node name="Chapetrs" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7dipn")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_oup5p")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.15
+anchor_right = 1.0
+anchor_bottom = 0.15
+offset_bottom = 42.0
+grow_horizontal = 2
+text = "Select Chapter"
+label_settings = SubResource("LabelSettings_ljoqg")
+horizontal_alignment = 1
+
+[node name="Chapter_con" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -50.0
+offset_right = 250.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 20
+columns = 3
+
+[node name="Chapter_1" type="Button" parent="Chapter_con"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("2_4gque")
+icon = ExtResource("3_j3s1k")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Chapter_2" type="Button" parent="Chapter_con"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("2_4gque")
+icon = ExtResource("3_texaa")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Chapter_3" type="Button" parent="Chapter_con"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("2_4gque")
+icon = ExtResource("4_6i7f2")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Chapter_4" type="Button" parent="Chapter_con"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme = ExtResource("2_4gque")
+icon = ExtResource("5_yn6tc")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Chapter_5" type="Button" parent="Chapter_con"]
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+theme = ExtResource("2_4gque")
+icon = ExtResource("6_2tcd5")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Chapter_6" type="Button" parent="Chapter_con"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("2_4gque")
+icon = ExtResource("7_ekrlq")
+icon_alignment = 1
+expand_icon = true

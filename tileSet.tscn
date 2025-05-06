@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c4ff3gljjx4e7"]
 
-[ext_resource type="PackedScene" uid="uid://dg2ovr41bsy74" path="res://Organized_files/Global/Mesh_Lib/Blender_files/Terrain.blend" id="1_e1t5x"]
+[ext_resource type="PackedScene" uid="uid://dg2ovr41bsy74" path="res://Game_files/Global/Mesh_Lib/Blender_files/Terrain.blend" id="1_e1t5x"]
 
 [node name="Node3D" type="Node3D"]
 
