@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://b226hd0yqcuq2"]
 
-[ext_resource type="Script" path="res://Game_files/Player.cs" id="1_e4jf3"]
-[ext_resource type="MeshLibrary" uid="uid://prccox4s7tyv" path="res://tileSet.tres" id="2_u30gr"]
+[ext_resource type="Script" path="res://Game_files/Global/Scripts/Player.cs" id="1_e4jf3"]
+[ext_resource type="MeshLibrary" uid="uid://prccox4s7tyv" path="res://Game_files/Global/Terrain/Mesh_librarys/tileSet.tres" id="2_u30gr"]
 [ext_resource type="PackedScene" uid="uid://djv5lj53snsmd" path="res://Game_files/Downloaded_assets/Models/security_camera_01_1k.blend/security_camera_01_1k.blend" id="3_mvo0c"]
 
 [sub_resource type="Environment" id="Environment_0emn1"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://c85yxavsmoapk"]
 
-[ext_resource type="Script" path="res://Game_files/Global/Global_scenes/RoomCamera.cs" id="1_8qket"]
+[ext_resource type="Script" path="res://Game_files/Global/Scripts/RoomCamera.cs" id="1_8qket"]
 [ext_resource type="PackedScene" uid="uid://djv5lj53snsmd" path="res://Game_files/Downloaded_assets/Models/security_camera_01_1k.blend/security_camera_01_1k.blend" id="1_lt3bd"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_f2ak4"]

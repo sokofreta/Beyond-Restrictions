@@ -7,7 +7,7 @@ public partial class FinishArea : Area3D
 		if (body == null)return;
 
 		if (Player.CanFinish){
-			GetTree().ChangeSceneToFile("res://Game_files/Main_game.tscn");
+			GetTree().ChangeSceneToFile("res://Game_files/Global/Global_scenes/Main_game.tscn");
 		}
 		else{
 			GD.Print("You need the master key");

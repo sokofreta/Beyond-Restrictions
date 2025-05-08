@@ -1,13 +1,13 @@
 [gd_scene load_steps=15 format=3 uid="uid://c46qgr8mlq353"]
 
 [ext_resource type="PackedScene" uid="uid://bcmwlmk4f7ek2" path="res://Game_files/Global/Global_scenes/player.tscn" id="1_mbglu"]
-[ext_resource type="MeshLibrary" uid="uid://prccox4s7tyv" path="res://tileSet.tres" id="2_j40iq"]
-[ext_resource type="MeshLibrary" uid="uid://b4ktlrxp8tild" path="res://LevelDecorations.tres" id="3_eab33"]
+[ext_resource type="MeshLibrary" uid="uid://prccox4s7tyv" path="res://Game_files/Global/Terrain/Mesh_librarys/tileSet.tres" id="2_j40iq"]
+[ext_resource type="MeshLibrary" uid="uid://b4ktlrxp8tild" path="res://Game_files/Global/Terrain/Mesh_librarys/LevelDecorations.tres" id="3_eab33"]
 [ext_resource type="PackedScene" uid="uid://c85yxavsmoapk" path="res://Game_files/Global/Global_scenes/room_camera.tscn" id="3_jy1uo"]
-[ext_resource type="PackedScene" uid="uid://i14aegwyhetq" path="res://metal_bars.tscn" id="4_1ytja"]
-[ext_resource type="PackedScene" uid="uid://dud6xquod1ha3" path="res://InteractionArea.tscn" id="5_8p6oc"]
+[ext_resource type="PackedScene" uid="uid://i14aegwyhetq" path="res://Game_files/General/Models/metal_bars.tscn" id="4_1ytja"]
+[ext_resource type="PackedScene" uid="uid://dud6xquod1ha3" path="res://Game_files/Global/Global_scenes/InteractionArea.tscn" id="5_8p6oc"]
 [ext_resource type="Texture2D" uid="uid://pukce5r8wk7c" path="res://Game_files/Chapters/Chapter_2/Decorations/Wall_Message.png" id="6_ied7u"]
-[ext_resource type="PackedScene" uid="uid://drejc5jyk7w2t" path="res://mater_key.tscn" id="8_wvql5"]
+[ext_resource type="PackedScene" uid="uid://drejc5jyk7w2t" path="res://Game_files/General/Models/master_key.tscn" id="8_wvql5"]
 [ext_resource type="Script" path="res://Game_files/Chapters/Chapter_1/FinishArea.cs" id="9_66d0k"]
 
 [sub_resource type="Environment" id="Environment_0emn1"]
@@ -175,5 +175,16 @@ script = ExtResource("9_66d0k")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="FinishArea"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.114746, -0.631896, 0.223395)
 shape = SubResource("BoxShape3D_734ky")
+
+[node name="InteractionLabel" type="Label" parent="."]
+visible = false
+anchors_preset = -1
+anchor_left = 0.25
+anchor_top = 0.4
+anchor_right = 0.75
+anchor_bottom = 0.6
+text = "You can interacte with anything you may disaere"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="body_entered" from="FinishArea" to="FinishArea" method="PlayerFinished"]

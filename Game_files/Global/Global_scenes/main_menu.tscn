@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://1ulm4l6ebt6p"]
 
-[ext_resource type="Script" path="res://Game_files/Global/Global_scenes/MainMenu.cs" id="1_uqg6f"]
+[ext_resource type="Script" path="res://Game_files/Global/Scripts/MainMenu.cs" id="1_uqg6f"]
 [ext_resource type="Texture2D" uid="uid://c4gd5ahyf2uft" path="res://Game_files/Downloaded_assets/Materials/concrete_layers_1k.blend/textures/concrete_layers_diff_1k.jpg" id="2_1rgfb"]
 [ext_resource type="Theme" uid="uid://cen33mn8ptnok" path="res://Game_files/Global/Themes/Main_menu_button.tres" id="3_2rsf5"]
 

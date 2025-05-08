@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bcmwlmk4f7ek2"]
 
-[ext_resource type="Script" path="res://Game_files/Player.cs" id="1_vxqqy"]
+[ext_resource type="Script" path="res://Game_files/Global/Scripts/Player.cs" id="1_vxqqy"]
 [ext_resource type="PackedScene" uid="uid://xyanu3colxk3" path="res://Game_files/Downloaded_assets/Models/Rigged_male/final low poly character  rigged.blend" id="2_t7jks"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hap5v"]

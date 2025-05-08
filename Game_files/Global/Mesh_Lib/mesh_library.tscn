@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dwn6dkei6ddt1"]
-
-[ext_resource type="PackedScene" uid="uid://b18kexcb37af4" path="res://Game_files/Global/Mesh_Lib/wall_with_texture.glb" id="1_qknnq"]
-
-[node name="Mesh_Library" type="Node3D"]
-
-[node name="wall_with_texture" parent="." instance=ExtResource("1_qknnq")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
