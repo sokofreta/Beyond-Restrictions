@@ -70,5 +70,7 @@ libraries = {
 "": SubResource("AnimationLibrary_ebbhb")
 }
 
+[node name="TimeToDetect" type="Timer" parent="."]
+
 [connection signal="body_entered" from="DetectionArea" to="." method="PlayerEnter"]
 [connection signal="body_exited" from="DetectionArea" to="." method="PlayerExits"]
