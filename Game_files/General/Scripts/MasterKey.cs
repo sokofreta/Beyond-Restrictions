@@ -12,7 +12,7 @@ public partial class MasterKey : Node3D
 	{
 		_Signals = GetNode<CustomSignals>("/root/CustomSignals");
 		VisibleKey = GetNode<MeshInstance3D>("MasterKey");
-		Name = "Master_Key";
+		Name = "MasterKey";
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -37,7 +37,7 @@ environment = SubResource("Environment_0emn1")
 transform = Transform3D(-0.553072, -0.833134, 1.08545e-07, 1.414e-07, 3.64174e-08, 1, -0.833134, 0.553072, 9.76641e-08, 31.4629, 10, 42.3981)
 
 [node name="Player" parent="." instance=ExtResource("1_mbglu")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 69.8047, 5.51148, 6.80753)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 64.8047, 5.51148, 22.3296)
 
 [node name="lights" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.29314, 1.37785)
@@ -135,6 +135,7 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 65, 8,
 
 [node name="KeyDoor" parent="LevelDoors" instance=ExtResource("4_1ytja")]
 transform = Transform3D(2.38498e-08, 0, -2, 0, 2, 0, 2, 0, 2.38498e-08, 63.9531, 3.94128, 26.0117)
+metadata/TypeOfDoor = 0
 
 [node name="MetalDoorInteractionArea" parent="LevelDoors/KeyDoor" node_paths=PackedStringArray("ParentBody") instance=ExtResource("5_8p6oc")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
@@ -147,6 +148,7 @@ metadata/Name_of_obj = &"Metal_door"
 
 [node name="PlayerStartingPoint" parent="LevelDoors" instance=ExtResource("4_1ytja")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 68.9531, 3.94128, 4.0117)
+metadata/TypeOfDoor = 1
 
 [node name="MetalDoorInteractionArea" parent="LevelDoors/PlayerStartingPoint" node_paths=PackedStringArray("ParentBody") instance=ExtResource("5_8p6oc")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
