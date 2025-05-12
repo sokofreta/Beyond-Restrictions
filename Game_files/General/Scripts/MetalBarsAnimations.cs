@@ -15,14 +15,22 @@ public partial class MetalBarsAnimations : Node3D
 	public override void _Ready()
 	{
 		MetalDoorAnimations = GetNode<AnimationPlayer>("Animations");
+		Name = "Locked Metal Door";
+
+		Variant TypeOfDoor = GetMeta("TypeOfDoor");
 		if (GetNodeOrNull<InteractionArea>("MetalDoorInteractionArea") != null){
 			InteractionArea = GetNodeOrNull<InteractionArea>("MetalDoorInteractionArea");
 			HasInteraction = true;
 			IsInteractable = true;
-			IsLocked = true;
-			IsUnlocked = false;
 			AfterReady = true;
 			CanUnlock = false;
+			IsLocked = true;
+			CanUnlock = false;
+			
+			if((int)TypeOfDoor == 0){
+				CanUnlock = true;
+			}
+			GD.Print(IsLocked && CanUnlock);
 		}
 	}
 
@@ -34,13 +42,12 @@ public partial class MetalBarsAnimations : Node3D
 
 		if(Player.InventoryItems.Count > 0){
 			Player.InventoryItems.ForEach(item => {
-					if(item.Name == "masterKey"){
+					if(item.Name == "MasterKey"){
 						CanUnlock = true;
 					}
 			});
 
 		}
-		else return;
 
 		if(IsLocked && CanUnlock){
 			IsLocked = false;
@@ -52,6 +59,7 @@ public partial class MetalBarsAnimations : Node3D
 		if (IsUnlocked){
 			IsInteractable = false;
 			MetalDoorAnimations.Play("Open_metal_door");
+			Name = " ";
 		}
 		
 		
@@ -60,6 +68,7 @@ public partial class MetalBarsAnimations : Node3D
 	public void FinishedAnimations(StringName animation){
 		if (animation.Equals("UnlockDoorWithSlider")){
 			IsUnlocked = true;
+			Name = "Unlocked Metal Door";
 		}
 	}
 }
